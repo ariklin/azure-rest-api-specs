@@ -4,7 +4,7 @@
     "location": "local",
     "api-version": "2015-11-01",
     "tenant": "azurestackci05.onmicrosoft.in",
-    "tenantDefinition": "eb90516e-65d7-4bf6-8537-8322e9172832",
+    "newTenant": "eb90516e-65d7-4bf6-8537-8322e9172832",
     "resourceGroupName": "system.local"
   },
   "responses": {

@@ -13,7 +13,6 @@ go:
 
 ``` yaml $(go) && $(multiapi)
 batch:
-  - tag: release_3_2
   - tag: release_1_0
   - tag: release_2_1
   - tag: release_2_2

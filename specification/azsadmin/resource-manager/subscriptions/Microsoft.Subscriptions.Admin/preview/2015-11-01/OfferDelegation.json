@@ -121,7 +121,7 @@
             "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "#/parameters/OfferDelegationDefinitionParameter"
+            "$ref": "#/parameters/NewOfferDelegationParameter"
           }
         ],
         "responses": {
@@ -231,9 +231,9 @@
       "type": "string",
       "x-ms-parameter-location": "method"
     },
-    "OfferDelegationDefinitionParameter": {
+    "NewOfferDelegationParameter": {
       "description": "New offer delegation parameter.",
-      "name": "offerDelegationDefinition",
+      "name": "newOfferDelegation",
       "in": "body",
       "required": true,
       "schema": {

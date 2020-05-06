@@ -1064,7 +1064,7 @@
       "type": "object",
       "required": [
         "id",
-        "detectedLanguage",
+        "detectedLanguages",
         "warnings"
       ],
       "properties": {
@@ -1072,9 +1072,12 @@
           "type": "string",
           "description": "Unique, non-empty document identifier."
         },
-        "detectedLanguage": {
-          "description": "Detected Language.",
-          "$ref": "#/definitions/DetectedLanguage"
+        "detectedLanguages": {
+          "type": "array",
+          "description": "A list of extracted languages.",
+          "items": {
+            "$ref": "#/definitions/DetectedLanguage"
+          }
         },
         "warnings": {
           "type": "array",

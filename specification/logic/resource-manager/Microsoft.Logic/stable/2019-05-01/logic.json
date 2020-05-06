@@ -294,6 +294,15 @@
           },
           {
             "$ref": "#/parameters/api-version"
+          },
+          {
+            "name": "workflow",
+            "description": "The workflow.",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Workflow"
+            }
           }
         ],
         "responses": {
@@ -659,7 +668,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/WorkflowReference"
+              "$ref": "#/definitions/Workflow"
             }
           },
           {
@@ -1134,16 +1143,10 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "202": {
-            "description": "Accepted"
-          },
           "default": {
-            "description": "Error response describing why the trigger run failed.",
+            "description": "All status codes are acceptable.",
             "schema": {
-              "$ref": "#/definitions/ErrorResponse"
+              "$ref": "#/definitions/Object"
             }
           }
         }
@@ -2729,15 +2732,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "validate",
-            "description": "The workflow.",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Workflow"
-            }
           },
           {
             "$ref": "#/parameters/api-version"
@@ -6514,13 +6508,8 @@
           "$ref": "#/definitions/FlowEndpointsConfiguration",
           "description": "The endpoints configuration."
         },
-        "accessControl": {
-          "$ref": "#/definitions/FlowAccessControlConfiguration",
-          "description": "The access control configuration."
-        },
         "sku": {
           "$ref": "#/definitions/Sku",
-          "readOnly": true,
           "description": "The sku."
         },
         "integrationAccount": {
@@ -6591,11 +6580,6 @@
     "WorkflowVersionProperties": {
       "type": "object",
       "properties": {
-        "provisioningState": {
-          "$ref": "#/definitions/WorkflowProvisioningState",
-          "readOnly": true,
-          "description": "The provisioning state."
-        },
         "createdTime": {
           "type": "string",
           "format": "date-time",
@@ -6622,17 +6606,8 @@
           "readOnly": true,
           "description": "Gets the access endpoint."
         },
-        "endpointsConfiguration": {
-          "$ref": "#/definitions/FlowEndpointsConfiguration",
-          "description": "The endpoints configuration."
-        },
-        "accessControl": {
-          "$ref": "#/definitions/FlowAccessControlConfiguration",
-          "description": "The access control configuration."
-        },
         "sku": {
           "$ref": "#/definitions/Sku",
-          "readOnly": true,
           "description": "The sku."
         },
         "integrationAccount": {
@@ -6882,12 +6857,6 @@
           "format": "date-time",
           "readOnly": true,
           "description": "Gets the end time."
-        },
-        "scheduledTime": {
-          "type": "string",
-          "format": "date-time",
-          "readOnly": true,
-          "description": "The scheduled time."
         },
         "status": {
           "$ref": "#/definitions/WorkflowStatus",
@@ -7150,7 +7119,7 @@
           "description": "Gets the tracking id."
         },
         "correlation": {
-          "$ref": "#/definitions/RunActionCorrelation",
+          "$ref": "#/definitions/Correlation",
           "description": "The correlation properties."
         },
         "inputsLink": {
@@ -7688,11 +7657,7 @@
         "Registered",
         "Unregistering",
         "Unregistered",
-        "Completed",
-        "Renewing",
-        "Pending",
-        "Waiting",
-        "InProgress"
+        "Completed"
       ],
       "x-ms-enum": {
         "name": "WorkflowProvisioningState",
@@ -8194,46 +8159,6 @@
         "name": "StatusAnnotation",
         "modelAsString": true
       }
-    },
-    "WorkflowTriggerReference": {
-      "type": "object",
-      "description": "The workflow trigger reference.",
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The workflow trigger resource reference name."
-        },
-        "flowName": {
-          "type": "string",
-          "description": "The workflow name."
-        },
-        "triggerName": {
-          "type": "string",
-          "description": "The workflow trigger name."
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/ResourceReference"
-        }
-      ]
-    },
-    "WorkflowReference": {
-      "type": "object",
-      "description": "The workflow reference.",
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The workflow name."
-        }
-      },
-      "allOf": [
-        {
-          "$ref": "#/definitions/ResourceReference"
-        }
-      ]
     },
     "ApiReference": {
       "type": "object",
@@ -8915,113 +8840,6 @@
       "x-ms-enum": {
         "name": "IntegrationServiceEnvironmentAccessEndpointType",
         "modelAsString": true
-      }
-    },
-    "FlowAccessControlConfiguration": {
-      "type": "object",
-      "description": "The access control configuration.",
-      "properties": {
-        "triggers": {
-          "$ref": "#/definitions/FlowAccessControlConfigurationPolicy",
-          "description": "The access control configuration for invoking workflow triggers."
-        },
-        "contents": {
-          "$ref": "#/definitions/FlowAccessControlConfigurationPolicy",
-          "description": "The access control configuration for accessing workflow run contents."
-        },
-        "actions": {
-          "$ref": "#/definitions/FlowAccessControlConfigurationPolicy",
-          "description": "The access control configuration for workflow actions."
-        },
-        "workflowManagement": {
-          "$ref": "#/definitions/FlowAccessControlConfigurationPolicy",
-          "description": "The access control configuration for workflow management."
-        }
-      }
-    },
-    "FlowAccessControlConfigurationPolicy": {
-      "type": "object",
-      "description": "The access control configuration policy.",
-      "properties": {
-        "allowedCallerIpAddresses": {
-          "type": "array",
-          "description": "The allowed caller IP address ranges.",
-          "items": {
-            "$ref": "#/definitions/IpAddressRange",
-            "description": "The ip address range."
-          }
-        },
-        "openAuthenticationPolicies": {
-          "$ref": "#/definitions/OpenAuthenticationAccessPolicies",
-          "description": "The authentication policies for workflow."
-        }
-      }
-    },
-    "IpAddressRange": {
-      "type": "object",
-      "description": "The ip address range.",
-      "properties": {
-        "addressRange": {
-          "type": "string",
-          "description": "The IP address range."
-        }
-      }
-    },
-    "OpenAuthenticationAccessPolicies": {
-      "type": "object",
-      "description": "AuthenticationPolicy of type Open.",
-      "properties": {
-        "policies": {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/OpenAuthenticationAccessPolicy"
-          },
-          "description": "Open authentication policies."
-        }
-      }
-    },
-    "OpenAuthenticationAccessPolicy": {
-      "type": "object",
-      "description": "Open authentication access policy defined by user.",
-      "properties": {
-        "type": {
-          "$ref": "#/definitions/OpenAuthenticationProviderType",
-          "readOnly": true,
-          "description": "Type of provider for OAuth."
-        },
-        "claims": {
-          "type": "array",
-          "description": "The access policy claims.",
-          "items": {
-            "$ref": "#/definitions/OpenAuthenticationPolicyClaim",
-            "description": "The access policy claim."
-          }
-        }
-      }
-    },
-    "OpenAuthenticationProviderType": {
-      "type": "string",
-      "description": "Open authentication policy provider type.",
-      "enum": [
-        "AAD"
-      ],
-      "x-ms-enum": {
-        "name": "OpenAuthenticationProviderType",
-        "modelAsString": true
-      }
-    },
-    "OpenAuthenticationPolicyClaim": {
-      "type": "object",
-      "description": "Open authentication policy claim.",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the claim."
-        },
-        "value": {
-          "type": "string",
-          "description": "The value of the claim."
-        }
       }
     },
     "FlowEndpointsConfiguration": {
@@ -11967,10 +11785,6 @@
       "description": "Logic REST API operation",
       "type": "object",
       "properties": {
-        "origin": {
-          "description": "Operation: origin",
-          "type": "string"
-        },
         "name": {
           "description": "Operation name: {provider}/{resource}/{operation}",
           "type": "string"
@@ -11990,17 +11804,8 @@
             "operation": {
               "description": "Operation type: Read, write, delete, etc.",
               "type": "string"
-            },
-            "description": {
-              "description": "Operation: description.",
-              "type": "string"
             }
           }
-        },
-        "properties": {
-          "x-ms-client-flatten": true,
-          "description": "The properties.",
-          "$ref": "#/definitions/Object"
         }
       }
     },
@@ -12186,10 +11991,6 @@
           "description": "The record type.",
           "$ref": "#/definitions/TrackingRecordType"
         },
-        "record": {
-          "description": "The record.",
-          "$ref": "#/definitions/Object"
-        },
         "error": {
           "description": "The error.",
           "$ref": "#/definitions/TrackingEventErrorInfo"
@@ -12263,7 +12064,7 @@
       "properties": {
         "source": {
           "description": "The source.",
-          "$ref": "#/definitions/WorkflowTriggerReference"
+          "$ref": "#/definitions/WorkflowTrigger"
         }
       }
     },

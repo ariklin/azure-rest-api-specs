@@ -146,7 +146,7 @@
             "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "#/parameters/DirectoryTenantDefinitionParameter"
+            "$ref": "#/parameters/NewDirectoryTenantParameter"
           }
         ],
         "responses": {
@@ -220,9 +220,9 @@
       "in": "path",
       "x-ms-parameter-location": "method"
     },
-    "DirectoryTenantDefinitionParameter": {
+    "NewDirectoryTenantParameter": {
       "description": "New directory tenant properties.",
-      "name": "tenantDefinition",
+      "name": "newTenant",
       "required": true,
       "in": "body",
       "schema": {

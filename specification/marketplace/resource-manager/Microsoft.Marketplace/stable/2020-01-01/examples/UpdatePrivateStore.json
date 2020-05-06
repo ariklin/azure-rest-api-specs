@@ -1,17 +1,20 @@
 {
   "parameters": {
-    "privateStoreId": "a0e28e55-90c4-41d8-8e34-bb7ef7775406",
+    "PrivateStoreId": "MyFirstPrivateStore",
     "api-version": "2020-01-01",
-    "PrivateStore": {
-      "parameters": {
-        "properties": {
-          "availability": "disabled",
-          "eTag": "\"9301f4fd-0000-0100-0000-5e248b350345\""
-        }
+    "parameters": {
+      "properties": {
+        "availability": "disabled",
+        "name": "MyNewFirstPrivateStore"
       }
     }
   },
   "responses": {
-    "200": {}
+    "200": {
+      "body": {
+        "name": "MyNewFirstPrivateStore",
+        "availability": "disabled"
+      }
+    }
   }
 }

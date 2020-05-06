@@ -16,7 +16,7 @@
     "application/json"
   ],
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations": {
       "get": {
         "x-ms-examples": {
           "Returns the list of backup locations.": {
@@ -37,12 +37,6 @@
           },
           {
             "$ref": "Backup.json#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "Backup.json#/parameters/TopParameter"
-          },
-          {
-            "$ref": "Backup.json#/parameters/SkipParameter"
           }
         ],
         "responses": {
@@ -58,7 +52,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}": {
       "get": {
         "x-ms-examples": {
           "Returns a specific backup location based on name.": {
@@ -135,13 +129,10 @@
             }
           }
         },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
-        }
+        "x-ms-long-running-operation": true
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/createBackup": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/createBackup": {
       "post": {
         "x-ms-examples": {
           "Back up a specific location.": {
@@ -149,9 +140,6 @@
           }
         },
         "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
-        },
         "description": "Back up a specific location.",
         "tags": [
           "BackupLocations"

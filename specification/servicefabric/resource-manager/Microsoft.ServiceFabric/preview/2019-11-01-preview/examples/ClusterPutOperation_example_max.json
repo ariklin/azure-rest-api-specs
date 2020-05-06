@@ -132,10 +132,7 @@
           "BackupRestoreService",
           "ResourceMonitorService"
         ],
-        "eventStoreServiceEnabled": true,
-        "applicationTypeVersionsCleanupPolicy": {
-          "maxUnusedVersionsToKeep": 2
-        }
+        "eventStoreServiceEnabled": true
       }
     }
   },
@@ -289,10 +286,7 @@
             "BackupRestoreService",
             "ResourceMonitorService"
           ],
-          "eventStoreServiceEnabled": true,
-          "applicationTypeVersionsCleanupPolicy": {
-            "maxUnusedVersionsToKeep": 2
-          }
+          "eventStoreServiceEnabled": true
         }
       }
     },
@@ -445,10 +439,7 @@
             "BackupRestoreService",
             "ResourceMonitorService"
           ],
-          "eventStoreServiceEnabled": true,
-          "applicationTypeVersionsCleanupPolicy": {
-            "maxUnusedVersionsToKeep": 2
-          }
+          "eventStoreServiceEnabled": true
         }
       }
     }

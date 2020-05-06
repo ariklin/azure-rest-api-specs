@@ -10,12 +10,6 @@
         "imagetemplate_tag1": "IT_T1",
         "imagetemplate_tag2": "IT_T2"
       },
-      "identity": {
-        "type": "UserAssigned",
-        "userAssignedIdentities": {
-          "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": {}
-        }
-      },
       "properties": {
         "source": {
           "type": "ManagedImage",
@@ -85,15 +79,6 @@
         "name": "myImageTemplate",
         "location": "westus",
         "type": "Microsoft.VirtualMachineImages/imageTemplate",
-        "identity": {
-          "type": "UserAssigned",
-          "userAssignedIdentities": {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": {
-              "clientId": "00000000-0000-0000-0000-000000000000",
-              "principalId": "00000000-0000-0000-0000-000000000000"
-            }
-          }
-        },
         "properties": {
           "source": {
             "type": "ManagedImage",
@@ -133,15 +118,6 @@
         "name": "myImageTemplate",
         "location": "westus",
         "type": "Microsoft.VirtualMachineImages/imageTemplate",
-        "identity": {
-          "type": "UserAssigned",
-          "userAssignedIdentities": {
-            "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": {
-              "clientId": "00000000-0000-0000-0000-000000000000",
-              "principalId": "00000000-0000-0000-0000-000000000000"
-            }
-          }
-        },
         "properties": {
           "source": {
             "type": "ManagedImage",

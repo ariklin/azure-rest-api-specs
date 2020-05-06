@@ -17,9 +17,6 @@
               "groupId": "configurationStores",
               "requiredMembers": [
                 "configurationStores"
-              ],
-              "requiredZoneNames": [
-                "privatelink.azconfig.io"
               ]
             }
           }

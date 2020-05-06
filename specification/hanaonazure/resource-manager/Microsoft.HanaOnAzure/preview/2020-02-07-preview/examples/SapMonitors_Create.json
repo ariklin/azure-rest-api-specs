@@ -5,16 +5,18 @@
     "resourceGroupName": "myResourceGroup",
     "sapMonitorName": "mySapMonitor",
     "sapMonitorParameter": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/sapMonitors/mySapMonitor",
+      "name": "mySapMonitor",
+      "type": "Microsoft.HanaOnAzure/sapMonitors",
       "location": "westus",
       "tags": {
         "key": "value"
       },
       "properties": {
         "enableCustomerAnalytics": true,
-        "logAnalyticsWorkspaceArmId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
-        "logAnalyticsWorkspaceId": "00000000-0000-0000-0000-000000000000",
-        "logAnalyticsWorkspaceSharedKey": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
-        "monitorSubnet": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet"
+        "logAnalyticsWorkspaceArmId": "",
+        "logAnalyticsWorkspaceId": "",
+        "logAnalyticsWorkspaceSharedKey": ""
       }
     }
   },
@@ -30,12 +32,11 @@
         },
         "properties": {
           "enableCustomerAnalytics": true,
-          "logAnalyticsWorkspaceArmId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
-          "logAnalyticsWorkspaceId": "00000000-0000-0000-0000-000000000000",
-          "logAnalyticsWorkspaceSharedKey": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
-          "monitorSubnet": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
-          "managedResourceGroupName": "myManagedResourceGroup",
-          "sapMonitorCollectorVersion": "v1.0",
+          "logAnalyticsWorkspaceArmId": "",
+          "logAnalyticsWorkspaceId": "",
+          "logAnalyticsWorkspaceSharedKey": "",
+          "managedResourceGroupName": "",
+          "sapMonitorCollectorVersion": "",
           "provisioningState": "Succeeded"
         }
       }
@@ -51,12 +52,11 @@
         },
         "properties": {
           "enableCustomerAnalytics": true,
-          "logAnalyticsWorkspaceArmId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
-          "logAnalyticsWorkspaceId": "00000000-0000-0000-0000-000000000000",
-          "logAnalyticsWorkspaceSharedKey": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
-          "monitorSubnet": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
-          "managedResourceGroupName": "myManagedResourceGroup",
-          "sapMonitorCollectorVersion": "v1.0",
+          "logAnalyticsWorkspaceArmId": "",
+          "logAnalyticsWorkspaceId": "",
+          "logAnalyticsWorkspaceSharedKey": "",
+          "managedResourceGroupName": "",
+          "sapMonitorCollectorVersion": "",
           "provisioningState": "Accepted"
         }
       }

@@ -49,7 +49,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans": {
       "get": {
         "x-ms-examples": {
           "Get the list of plans under a resource group.": {
@@ -85,7 +85,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans/{plan}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Subscriptions.Admin/plans/{plan}": {
       "get": {
         "x-ms-examples": {
           "Get the specified plan.": {
@@ -145,7 +145,7 @@
             "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "#/parameters/PlanDefinitionParameter"
+            "$ref": "#/parameters/NewPlanParameter"
           }
         ],
         "responses": {
@@ -346,9 +346,9 @@
     }
   },
   "parameters": {
-    "PlanDefinitionParameter": {
+    "NewPlanParameter": {
       "description": "New plan.",
-      "name": "planDefinition",
+      "name": "newPlan",
       "in": "body",
       "required": true,
       "schema": {

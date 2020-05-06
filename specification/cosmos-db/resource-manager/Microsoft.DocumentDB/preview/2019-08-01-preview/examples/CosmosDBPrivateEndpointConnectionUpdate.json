@@ -28,9 +28,7 @@
             "status": "Approved",
             "description": "Auto-approved",
             "actionsRequired": "None"
-          },
-          "groupId": "Sql",
-          "provisioningState": "Succeeded"
+          }
         }
       }
     },

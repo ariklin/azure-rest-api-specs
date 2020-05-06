@@ -217,11 +217,11 @@
   },
   "definitions": {
     "ErrorResponse": {
-      "description": "Error response indicates Insights service is not able to process the incoming request. The reason is provided in the error message.",
+      "description": "Describe the format of an Error response.",
       "type": "object",
       "properties": {
         "code": {
-          "description": "Error code.",
+          "description": "Error code",
           "type": "string"
         },
         "message": {

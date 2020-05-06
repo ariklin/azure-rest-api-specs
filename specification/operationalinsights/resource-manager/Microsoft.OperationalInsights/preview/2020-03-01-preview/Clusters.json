@@ -224,8 +224,7 @@
               "$ref": "#/definitions/ClusterErrorResponse"
             }
           }
-        },
-        "x-ms-long-running-operation": true
+        }
       },
       "get": {
         "tags": [
@@ -348,11 +347,10 @@
             "Failed",
             "Canceled",
             "Deleting",
-            "ProvisioningAccount",
-            "Updating"
+            "ProvisioningAccount"
           ],
           "x-ms-enum": {
-            "name": "ClusterEntityStatus",
+            "name": "EntityStatus",
             "modelAsString": true
           }
         },
@@ -430,7 +428,8 @@
           "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/TrackedResource"
         }
       ],
-      "description": "The top level Log Analytics cluster resource container."
+      "description": "The top level Log Analytics cluster resource container.",
+      "x-ms-azure-resource": true
     },
     "ClusterListResult": {
       "properties": {

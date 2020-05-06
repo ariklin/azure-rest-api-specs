@@ -60,11 +60,9 @@ csharp:
   clear-output-folder: true
 ```
 
-## Multi-API/Profile support for AutoRest v3 generators
+## Multi-API/Profile support for AutoRest v3 generators 
 
-AutoRest V3 generators require the use of `--tag=all-api-versions` to select api files. 
-
-> see https://aka.ms/autorest
+AutoRest V3 generators require the use of `--tag=all-api-versions` to select api files.
 
 This block is updated by an automatic script. Edits may be lost!
 
@@ -82,10 +80,11 @@ input-file:
 
 ```
 
-If there are files that should not be in the `all-api-versions` set,  
-uncomment the  `exclude-file` section below and add the file paths. 
+If there are files that should not be in the `all-api-versions` set, 
+uncomment the  `exclude-file` section below and add the file paths.
 
-``` yaml $(tag) == 'all-api-versions' 
-#exclude-file:  
-#  - $(this-folder)/Microsoft.Example/stable/2010-01-01/somefile.json 
+``` yaml $(tag) == 'all-api-versions'
+#exclude-file: 
+#  - $(this-folder)/Microsoft.Example/stable/2010-01-01/somefile.json
 ```
+

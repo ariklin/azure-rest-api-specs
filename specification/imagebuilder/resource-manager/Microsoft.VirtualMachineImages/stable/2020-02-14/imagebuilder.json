@@ -175,6 +175,9 @@
           },
           "Create an Image Template for Windows.": {
             "$ref": "./examples/CreateImageTemplateWindows.json"
+          },
+          "Create an Image Template with a user assigned identity configured": {
+            "$ref": "./examples/CreateImageTemplateWithUserAssignedIdentity.json"
           }
         }
       },
@@ -347,9 +350,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "The operation was successful."
-          },
           "204": {
             "description": "The operation was successful."
           },
@@ -396,9 +396,6 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "The operation was successful."
-          },
           "204": {
             "description": "The long running image build has been canceled."
           },
@@ -1165,9 +1162,6 @@
         {
           "$ref": "#/definitions/Resource"
         }
-      ],
-      "required": [
-        "identity"
       ]
     },
     "ImageTemplateUpdateParameters": {

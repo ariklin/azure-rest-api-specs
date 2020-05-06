@@ -89,8 +89,7 @@
               "$ref": "#/definitions/LinkedService"
             }
           }
-        },
-        "x-ms-long-running-operation": true
+        }
       },
       "delete": {
         "tags": [
@@ -126,16 +125,12 @@
         ],
         "responses": {
           "200": {
-            "description": "OK response definition.",
-            "schema": {
-              "$ref": "#/definitions/LinkedService"
-            }
+            "description": "OK response definition."
           },
           "204": {
             "description": "NoContent response definition."
           }
-        },
-        "x-ms-long-running-operation": true
+        }
       },
       "get": {
         "tags": [
@@ -229,20 +224,6 @@
         "writeAccessResourceId": {
           "type": "string",
           "description": "The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access"
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "The provisioning state of the linked service.",
-          "enum": [
-            "Succeeded",
-            "Deleting",
-            "ProvisioningAccount",
-            "Updating"
-          ],
-          "x-ms-enum": {
-            "name": "LinkedServiceEntityStatus",
-            "modelAsString": true
-          }
         }
       },
       "description": "Linked service properties."
@@ -275,7 +256,8 @@
           "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
         }
       ],
-      "description": "The top level Linked service resource container."
+      "description": "The top level Linked service resource container.",
+      "x-ms-azure-resource": true
     },
     "LinkedServiceListResult": {
       "properties": {

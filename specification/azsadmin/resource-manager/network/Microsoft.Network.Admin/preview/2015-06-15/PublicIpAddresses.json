@@ -19,14 +19,14 @@
     "/subscriptions/{subscriptionId}/providers/Microsoft.Network.Admin/adminPublicIpAddresses": {
       "get": {
         "x-ms-examples": {
-          "List of public IP addresses": {
+          "List of public ip addresses": {
             "$ref": "./examples/PublicIpAddresses/List.json"
           }
         },
         "tags": [
           "PublicIpAddresses"
         ],
-        "description": "List of public IP addresses.",
+        "description": "List of public ip addresses.",
         "operationId": "PublicIPAddresses_List",
         "parameters": [
           {

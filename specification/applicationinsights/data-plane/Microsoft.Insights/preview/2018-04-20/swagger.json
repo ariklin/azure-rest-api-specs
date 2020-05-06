@@ -1212,9 +1212,6 @@
             "additionalProperties": {
               "type": "object"
             }
-          },
-          "additionalProperties": {
-            "type": "object"
           }
         },
         "customMeasurements": {
@@ -1224,9 +1221,6 @@
             "additionalProperties": {
               "type": "object"
             }
-          },
-          "additionalProperties": {
-            "type": "object"
           }
         },
         "operation": {

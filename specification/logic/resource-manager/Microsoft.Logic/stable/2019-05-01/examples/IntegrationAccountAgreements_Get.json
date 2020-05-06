@@ -43,9 +43,9 @@
                     "sendMDNAsynchronously": true,
                     "receiptDeliveryUrl": "http://tempuri.org",
                     "dispositionNotificationTo": "http://tempuri.org",
-                    "signOutboundMDNIfOptional": true,
+                    "signOutboundMdnIfOptional": true,
                     "mdnText": "Sample",
-                    "sendInboundMDNToMessageBox": true,
+                    "sendInboundMdnToMessageBox": true,
                     "micHashingAlgorithm": "SHA1"
                   },
                   "securitySettings": {
@@ -109,9 +109,9 @@
                     "sendMDNAsynchronously": true,
                     "receiptDeliveryUrl": "http://tempuri.org",
                     "dispositionNotificationTo": "http://tempuri.org",
-                    "signOutboundMDNIfOptional": true,
+                    "signOutboundMdnIfOptional": true,
                     "mdnText": "Sample",
-                    "sendInboundMDNToMessageBox": true,
+                    "sendInboundMdnToMessageBox": true,
                     "micHashingAlgorithm": "SHA1"
                   },
                   "securitySettings": {

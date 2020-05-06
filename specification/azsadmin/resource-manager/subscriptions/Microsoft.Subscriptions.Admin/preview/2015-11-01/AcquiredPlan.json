@@ -146,7 +146,7 @@
             "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
           },
           {
-            "$ref": "#/parameters/AcquiredPlanDefinitionParameter"
+            "$ref": "#/parameters/NewAcquiredPlanParameter"
           }
         ],
         "responses": {
@@ -268,8 +268,8 @@
       "type": "string",
       "x-ms-parameter-location": "method"
     },
-    "AcquiredPlanDefinitionParameter": {
-      "name": "acquiredPlanDefinition",
+    "NewAcquiredPlanParameter": {
+      "name": "newAcquiredPlan",
       "in": "body",
       "description": "The new acquired plan.",
       "required": true,

@@ -14,8 +14,8 @@
               "provisioningState": "Succeeded"
             },
             "location": "eastus",
-            "name": "myPeeringService",
-            "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Peering/peeringServices/myPeeringService",
+            "name": "peeringServiceName",
+            "id": "/subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName",
             "type": "Microsoft.Peering/peeringServices"
           }
         ]

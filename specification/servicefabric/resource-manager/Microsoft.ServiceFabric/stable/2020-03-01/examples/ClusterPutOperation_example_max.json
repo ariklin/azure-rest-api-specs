@@ -6,9 +6,8 @@
     "api-version": "2020-03-01",
     "parameters": {
       "location": "eastus",
-      "tags": {},
       "properties": {
-        "clusterCodeVersion": "7.0.470.9590",
+        "clusterCodeVersion": "6.5.639.9590",
         "managementEndpoint": "https://myCluster.eastus.cloudapp.azure.com:19080",
         "certificateCommonNames": {
           "commonNames": [
@@ -133,10 +132,7 @@
           "BackupRestoreService",
           "ResourceMonitorService"
         ],
-        "eventStoreServiceEnabled": true,
-        "applicationTypeVersionsCleanupPolicy": {
-          "maxUnusedVersionsToKeep": 2
-        }
+        "eventStoreServiceEnabled": true
       }
     }
   },
@@ -290,10 +286,7 @@
             "BackupRestoreService",
             "ResourceMonitorService"
           ],
-          "eventStoreServiceEnabled": true,
-          "applicationTypeVersionsCleanupPolicy": {
-            "maxUnusedVersionsToKeep": 2
-          }
+          "eventStoreServiceEnabled": true
         }
       }
     },
@@ -446,10 +439,7 @@
             "BackupRestoreService",
             "ResourceMonitorService"
           ],
-          "eventStoreServiceEnabled": true,
-          "applicationTypeVersionsCleanupPolicy": {
-            "maxUnusedVersionsToKeep": 2
-          }
+          "eventStoreServiceEnabled": true
         }
       }
     }

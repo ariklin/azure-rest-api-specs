@@ -5,11 +5,11 @@
     "autoQuotaIncreaseRequest": {
       "properties": {
         "settings": {
-          "autoQuotaIncreaseState": "enabledForPreview"
+          "autoQuotaIncreaseState": "enabled"
         },
         "onSuccess": {
           "emailActions": {
-            "emailAddresses": [
+            "value": [
               {
                 "emailAddress": "itsupport@contoso.com"
               },
@@ -21,7 +21,7 @@
         },
         "onFailure": {
           "emailActions": {
-            "emailAddresses": [
+            "value": [
               {
                 "emailAddress": "itsupport@contoso.com"
               },
@@ -32,7 +32,7 @@
           }
         },
         "supportTicketAction": {
-          "autoQuotaIncreaseState": "enabledForPreview",
+          "autoQuotaIncreaseState": "enabled",
           "severity": "Minimal",
           "firstName": "FN",
           "lastName": "LN",
@@ -57,11 +57,11 @@
         "name": "Automatic Quota Increase",
         "properties": {
           "settings": {
-            "autoQuotaIncreaseState": "enabledForPreview"
+            "autoQuotaIncreaseState": "enabled"
           },
           "onSuccess": {
             "emailActions": {
-              "emailAddresses": [
+              "value": [
                 {
                   "emailAddress": "itsupport@contoso.com"
                 },
@@ -73,7 +73,7 @@
           },
           "onFailure": {
             "emailActions": {
-              "emailAddresses": [
+              "value": [
                 {
                   "emailAddress": "itsupport@contoso.com"
                 },
@@ -84,7 +84,7 @@
             }
           },
           "supportTicketAction": {
-            "autoQuotaIncreaseState": "enabledForPreview",
+            "autoQuotaIncreaseState": "enabled",
             "severity": "Minimal",
             "firstName": "FN",
             "lastName": "LN",

@@ -37,15 +37,14 @@
     "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/intelligencePacks/{intelligencePackName}/Disable": {
       "post": {
         "tags": [
-          "Workspaces",
-          "IntelligencePacks"
+          "Workspaces"
         ],
         "x-ms-examples": {
           "IntelligencePacksDisable": {
             "$ref": "./examples/WorkspacesDisableIntelligencePack.json"
           }
         },
-        "operationId": "IntelligencePacks_Disable",
+        "operationId": "Workspaces_DisableIntelligencePack",
         "description": "Disables an intelligence pack for a given workspace.",
         "parameters": [
           {
@@ -78,15 +77,14 @@
     "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/intelligencePacks/{intelligencePackName}/Enable": {
       "post": {
         "tags": [
-          "Workspaces",
-          "IntelligencePacks"
+          "Workspaces"
         ],
         "x-ms-examples": {
           "IntelligencePacksEnable": {
             "$ref": "./examples/WorkspacesEnableIntelligencePack.json"
           }
         },
-        "operationId": "IntelligencePacks_Enable",
+        "operationId": "Workspaces_EnableIntelligencePack",
         "description": "Enables an intelligence pack for a given workspace.",
         "parameters": [
           {
@@ -119,15 +117,14 @@
     "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/intelligencePacks": {
       "get": {
         "tags": [
-          "Workspaces",
-          "IntelligencePacks"
+          "Workspaces"
         ],
         "x-ms-examples": {
           "IntelligencePacksList": {
             "$ref": "./examples/WorkspacesListIntelligencePacks.json"
           }
         },
-        "operationId": "IntelligencePacks_List",
+        "operationId": "Workspaces_ListIntelligencePacks",
         "description": "Lists all the intelligence packs possible and whether they are enabled or disabled for a given workspace.",
         "parameters": [
           {

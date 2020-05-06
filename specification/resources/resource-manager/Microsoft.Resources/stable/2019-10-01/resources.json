@@ -257,7 +257,6 @@
           "Deployments"
         ],
         "operationId": "Deployments_ValidateAtScope",
-        "x-ms-long-running-operation": true,
         "description": "Validates whether the specified template is syntactically correct and will be accepted by Azure Resource Manager..",
         "parameters": [
           {
@@ -285,9 +284,6 @@
             "schema": {
               "$ref": "#/definitions/DeploymentValidateResult"
             }
-          },
-          "202": {
-            "description": "Accepted - The request has been accepted for processing and the operation will complete asynchronously."
           },
           "400": {
             "description": "Returns the validation result.",
@@ -565,7 +561,6 @@
           "Deployments"
         ],
         "operationId": "Deployments_ValidateAtTenantScope",
-        "x-ms-long-running-operation": true,
         "description": "Validates whether the specified template is syntactically correct and will be accepted by Azure Resource Manager..",
         "parameters": [
           {
@@ -590,9 +585,6 @@
             "schema": {
               "$ref": "#/definitions/DeploymentValidateResult"
             }
-          },
-          "202": {
-            "description": "Accepted - The request has been accepted for processing and the operation will complete asynchronously."
           },
           "400": {
             "description": "Returns the validation result.",
@@ -879,7 +871,6 @@
           "Deployments"
         ],
         "operationId": "Deployments_ValidateAtManagementGroupScope",
-        "x-ms-long-running-operation": true,
         "description": "Validates whether the specified template is syntactically correct and will be accepted by Azure Resource Manager..",
         "parameters": [
           {
@@ -907,9 +898,6 @@
             "schema": {
               "$ref": "#/definitions/DeploymentValidateResult"
             }
-          },
-          "202": {
-            "description": "Accepted - The request has been accepted for processing and the operation will complete asynchronously."
           },
           "400": {
             "description": "Returns the validation result.",
@@ -1197,7 +1185,6 @@
           "Deployments"
         ],
         "operationId": "Deployments_ValidateAtSubscriptionScope",
-        "x-ms-long-running-operation": true,
         "description": "Validates whether the specified template is syntactically correct and will be accepted by Azure Resource Manager..",
         "parameters": [
           {
@@ -1225,9 +1212,6 @@
             "schema": {
               "$ref": "#/definitions/DeploymentValidateResult"
             }
-          },
-          "202": {
-            "description": "Accepted - The request has been accepted for processing and the operation will complete asynchronously."
           },
           "400": {
             "description": "Returns the validation result.",
@@ -1638,7 +1622,6 @@
           "Deployments"
         ],
         "operationId": "Deployments_Validate",
-        "x-ms-long-running-operation": true,
         "description": "Validates whether the specified template is syntactically correct and will be accepted by Azure Resource Manager..",
         "parameters": [
           {
@@ -1676,9 +1659,6 @@
             "schema": {
               "$ref": "#/definitions/DeploymentValidateResult"
             }
-          },
-          "202": {
-            "description": "Accepted - The request has been accepted for processing and the operation will complete asynchronously."
           },
           "400": {
             "description": "Returns the validation result.",
@@ -4414,7 +4394,7 @@
       },
       "description": "An error response for a resource management request."
     },
-    "AliasPath": {
+    "AliasPathType": {
       "properties": {
         "path": {
           "type": "string",
@@ -4428,13 +4408,13 @@
           "description": "The API versions."
         },
         "pattern": {
-          "$ref": "#/definitions/AliasPattern",
+          "$ref": "#/definitions/AliasPatternType",
           "description": "The pattern for an alias path."
         }
       },
       "description": "The type of the paths for alias."
     },
-    "AliasPattern": {
+    "AliasPatternType": {
       "properties": {
         "phrase": {
           "type": "string",
@@ -4469,7 +4449,7 @@
       },
       "description": "The type of the pattern for an alias path."
     },
-    "Alias": {
+    "AliasType": {
       "properties": {
         "name": {
           "type": "string",
@@ -4478,7 +4458,7 @@
         "paths": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/AliasPath"
+            "$ref": "#/definitions/AliasPathType"
           },
           "description": "The paths for an alias."
         },
@@ -4514,7 +4494,7 @@
           "description": "The default path for an alias."
         },
         "defaultPattern": {
-          "$ref": "#/definitions/AliasPattern",
+          "$ref": "#/definitions/AliasPatternType",
           "description": "The default pattern for an alias."
         }
       },
@@ -4536,7 +4516,7 @@
         "aliases": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Alias"
+            "$ref": "#/definitions/AliasType"
           },
           "description": "The aliases that are supported by this resource type."
         },
@@ -5034,7 +5014,6 @@
         },
         "userAssignedIdentities": {
           "type": "object",
-          "x-ms-client-name": "IdentityUserAssignedIdentitiesValue",
           "additionalProperties": {
             "type": "object",
             "properties": {
@@ -5303,69 +5282,6 @@
     },
     "DeploymentOperationProperties": {
       "properties": {
-        "provisioningOperation": {
-          "readOnly": true,
-          "type": "string",
-          "description": "The name of the current provisioning operation.",
-          "enum": [
-            "NotSpecified",
-            "Create",
-            "Delete",
-            "Waiting",
-            "AzureAsyncOperationWaiting",
-            "ResourceCacheWaiting",
-            "Action",
-            "Read",
-            "EvaluateDeploymentOutput",
-            "DeploymentCleanup"
-          ],
-          "x-ms-enum": {
-            "name": "ProvisioningOperation",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "NotSpecified",
-                "description": "The provisioning operation is not specified."
-              },
-              {
-                "value": "Create",
-                "description": "The provisioning operation is create."
-              },
-              {
-                "value": "Delete",
-                "description": "The provisioning operation is delete."
-              },
-              {
-                "value": "Waiting",
-                "description": "The provisioning operation is waiting."
-              },
-              {
-                "value": "AzureAsyncOperationWaiting",
-                "description": "The provisioning operation is waiting Azure async operation."
-              },
-              {
-                "value": "ResourceCacheWaiting",
-                "description": "The provisioning operation is waiting for resource cache."
-              },
-              {
-                "value": "Action",
-                "description": "The provisioning operation is action."
-              },
-              {
-                "value": "Read",
-                "description": "The provisioning operation is read."
-              },
-              {
-                "value": "EvaluateDeploymentOutput",
-                "description": "The provisioning operation is evaluate output."
-              },
-              {
-                "value": "DeploymentCleanup",
-                "description": "The provisioning operation is cleanup. This operation is part of the 'complete' mode deployment."
-              }
-            ]
-          }
-        },
         "provisioningState": {
           "readOnly": true,
           "type": "string",
@@ -5819,8 +5735,7 @@
       "required": true,
       "type": "string",
       "description": "The resource scope.",
-      "x-ms-parameter-location": "method",
-      "x-ms-skip-url-encoding": true
+      "x-ms-parameter-location": "method"
     },
     "GroupIdParameter": {
       "name": "groupId",

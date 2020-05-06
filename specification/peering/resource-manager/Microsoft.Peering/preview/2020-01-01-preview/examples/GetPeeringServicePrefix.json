@@ -2,7 +2,7 @@
   "parameters": {
     "subscriptionId": "subId",
     "resourceGroupName": "rgName",
-    "myPeeringService": "myPeeringService",
+    "peeringServiceName": "peeringServiceName",
     "prefixName": "peeringServicePrefixName",
     "api-version": "2020-01-01-preview"
   },
@@ -17,7 +17,7 @@
           "provisioningState": "Succeeded"
         },
         "name": "peeringServicePrefixName",
-        "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Peering/peeringServices/myPeeringService/prefixes/myPeeringServicePrefix"
+        "id": "/subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName/prefixes/peeringServicePrefixName"
       }
     }
   }

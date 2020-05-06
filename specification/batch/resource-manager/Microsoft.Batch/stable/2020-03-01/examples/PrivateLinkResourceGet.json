@@ -16,9 +16,6 @@
           "groupId": "batchAccount",
           "requiredMembers": [
             "batchAccount"
-          ],
-          "requiredZoneNames": [
-            "privatelink.japaneast.batch.azure.com"
           ]
         }
       }

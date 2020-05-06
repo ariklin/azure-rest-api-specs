@@ -15,8 +15,6 @@
               "url": "myapp.myservice.azuremicroservices.io",
               "provisioningState": "Succeeded",
               "activeDeploymentName": "mydeployment1",
-              "fqdn": "myapp.mydomain.com",
-              "httpsOnly": false,
               "temporaryDisk": {
                 "sizeInGB": 2,
                 "mountPath": "mytemporarydisk"

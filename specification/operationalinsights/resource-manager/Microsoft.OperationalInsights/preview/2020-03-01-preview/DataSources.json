@@ -308,7 +308,8 @@
           "$ref": "../../../../../common-types/resource-management/v1/types.json#/definitions/ProxyResource"
         }
       ],
-      "description": "Datasources under OMS Workspace."
+      "description": "Datasources under OMS Workspace.",
+      "x-ms-azure-resource": true
     },
     "DataSourceFilter": {
       "properties": {

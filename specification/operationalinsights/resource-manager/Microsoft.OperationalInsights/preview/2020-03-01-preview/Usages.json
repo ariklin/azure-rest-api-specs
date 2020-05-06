@@ -44,7 +44,7 @@
             "$ref": "./examples/WorkspacesListUsages.json"
           }
         },
-        "operationId": "Usages_List",
+        "operationId": "Workspaces_ListUsages",
         "description": "Gets a list of usage metrics for a workspace.",
         "parameters": [
           {

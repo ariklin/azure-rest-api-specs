@@ -63,7 +63,7 @@
             },
             "location": "centralus",
             "name": "peeringName",
-            "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Peering/peerings/myPeering",
+            "id": "/subscriptions/subId/providers/Microsoft.Peering/peerings/peeringName",
             "type": "Microsoft.Peering/peerings"
           }
         ]

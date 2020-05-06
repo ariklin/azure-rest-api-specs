@@ -19,9 +19,7 @@
       "exposure",
       "noise"
     ],
-    "ImageUrl": {
-      "url": "{Image Url here}"
-    },
+    "ImageUrl": "{Image Url here}",
     "recognitionModel": "recognition_01",
     "returnRecognitionModel": true,
     "detectionModel": "detection_01"

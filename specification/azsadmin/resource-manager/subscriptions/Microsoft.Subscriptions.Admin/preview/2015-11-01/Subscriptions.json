@@ -238,7 +238,7 @@
         "x-ms-pageable": {
           "nextLinkName": null
         },
-        "x-ms-odata": "#/definitions/SubscriptionDefinition"
+        "x-ms-odata": "#/definitions/Subscription"
       }
     },
     "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/checkNameAvailability": {
@@ -274,7 +274,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscriptionId}": {
+    "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{subscription}": {
       "get": {
         "x-ms-examples": {
           "Get a specified subscription.": {
@@ -291,7 +291,7 @@
             "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "#/parameters/TargetSubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionParameter"
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -301,7 +301,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/SubscriptionDefinition"
+              "$ref": "#/definitions/Subscription"
             }
           }
         }
@@ -322,10 +322,10 @@
             "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "#/parameters/TargetSubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionParameter"
           },
           {
-            "$ref": "#/parameters/SubscriptionDefinitionParameter"
+            "$ref": "#/parameters/NewSubscriptionParameter"
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -335,13 +335,13 @@
           "201": {
             "description": "Created",
             "schema": {
-              "$ref": "#/definitions/SubscriptionDefinition"
+              "$ref": "#/definitions/Subscription"
             }
           },
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/SubscriptionDefinition"
+              "$ref": "#/definitions/Subscription"
             }
           }
         }
@@ -362,7 +362,7 @@
             "$ref": "#/parameters/SubscriptionIdParameter"
           },
           {
-            "$ref": "#/parameters/TargetSubscriptionIdParameter"
+            "$ref": "#/parameters/SubscriptionParameter"
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -767,8 +767,8 @@
         }
       }
     },
-    "SubscriptionDefinition": {
-      "description": "Subscription object properties.",
+    "Subscription": {
+      "description": "List of supported operations.",
       "type": "object",
       "properties": {
         "delegatedProviderSubscriptionId": {
@@ -820,7 +820,7 @@
           "type": "array",
           "description": "Subscription definition.",
           "items": {
-            "$ref": "#/definitions/SubscriptionDefinition"
+            "$ref": "#/definitions/Subscription"
           }
         },
         "nextLink": {
@@ -1215,20 +1215,20 @@
       "required": true,
       "x-ms-parameter-location": "method"
     },
-    "TargetSubscriptionIdParameter": {
-      "description": "The target subscription ID.",
-      "name": "targetSubscriptionId",
+    "SubscriptionParameter": {
+      "description": "Subscription parameter.",
+      "name": "subscription",
       "in": "path",
       "type": "string",
       "required": true,
       "x-ms-parameter-location": "method"
     },
-    "SubscriptionDefinitionParameter": {
+    "NewSubscriptionParameter": {
       "description": "Subscription parameter.",
-      "name": "subscriptionDefinition",
+      "name": "newSubscription",
       "in": "body",
       "schema": {
-        "$ref": "#/definitions/SubscriptionDefinition"
+        "$ref": "#/definitions/Subscription"
       },
       "required": true,
       "x-ms-parameter-location": "method"

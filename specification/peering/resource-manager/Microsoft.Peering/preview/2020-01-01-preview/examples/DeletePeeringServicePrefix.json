@@ -2,7 +2,7 @@
   "parameters": {
     "subscriptionId": "subId",
     "resourceGroupName": "rgName",
-    "myPeeringService": "myPeeringService",
+    "peeringServiceName": "peeringServiceName",
     "prefixName": "peeringServicePrefixName",
     "api-version": "2020-01-01-preview"
   },

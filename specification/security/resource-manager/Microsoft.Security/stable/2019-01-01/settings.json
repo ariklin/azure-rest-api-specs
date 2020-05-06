@@ -175,6 +175,7 @@
     "Setting": {
       "type": "object",
       "description": "Represents a security setting in Azure Security Center.",
+      "discriminator": "kind",
       "properties": {},
       "allOf": [
         {
@@ -182,9 +183,10 @@
         }
       ]
     },
-    "DataExportSettings": {
+    "DataExportSetting": {
       "type": "object",
       "description": "Represents a data export setting",
+      "x-ms-discriminator-value": "DataExportSetting",
       "properties": {
         "properties": {
           "x-ms-client-flatten": true,
@@ -196,8 +198,7 @@
         {
           "$ref": "#/definitions/Setting"
         }
-      ],
-      "x-ms-discriminator-value": "DataExportSettings"
+      ]
     },
     "SettingResource": {
       "type": "object",
@@ -205,9 +206,9 @@
       "properties": {
         "kind": {
           "type": "string",
-          "description": "the kind of the settings string (DataExportSettings)",
+          "description": "the kind of the settings string (DataExportSetting)",
           "enum": [
-            "DataExportSettings",
+            "DataExportSetting",
             "AlertSuppressionSetting"
           ],
           "x-ms-enum": {
@@ -215,7 +216,7 @@
             "modelAsString": true,
             "values": [
               {
-                "value": "DataExportSettings"
+                "value": "DataExportSetting"
               },
               {
                 "value": "AlertSuppressionSetting"
@@ -224,7 +225,6 @@
           }
         }
       },
-      "discriminator": "kind",
       "required": [
         "kind"
       ],

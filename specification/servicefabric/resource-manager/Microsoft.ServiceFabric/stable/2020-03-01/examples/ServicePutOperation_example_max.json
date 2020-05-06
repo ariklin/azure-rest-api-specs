@@ -29,8 +29,7 @@
         "servicePlacementPolicies": [],
         "defaultMoveCost": "Medium",
         "instanceCount": 5,
-        "servicePackageActivationMode": "SharedProcess",
-        "serviceDnsName": "my.service.dns"
+        "servicePackageActivationMode": "SharedProcess"
       }
     }
   },
@@ -64,8 +63,7 @@
           "servicePlacementPolicies": [],
           "defaultMoveCost": "Medium",
           "instanceCount": 5,
-          "servicePackageActivationMode": "SharedProcess",
-          "serviceDnsName": "my.service.dns"
+          "servicePackageActivationMode": "SharedProcess"
         }
       }
     }

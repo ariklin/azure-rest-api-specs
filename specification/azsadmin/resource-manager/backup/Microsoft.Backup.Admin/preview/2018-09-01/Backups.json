@@ -16,7 +16,7 @@
     "application/json"
   ],
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/backups": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/backups": {
       "get": {
         "x-ms-examples": {
           "Returns a list of backups from a location.": {
@@ -40,12 +40,6 @@
           },
           {
             "$ref": "Backup.json#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "Backup.json#/parameters/TopParameter"
-          },
-          {
-            "$ref": "Backup.json#/parameters/SkipParameter"
           }
         ],
         "responses": {
@@ -61,7 +55,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/backups/{backup}": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/backups/{backup}": {
       "get": {
         "x-ms-examples": {
           "Returns a backup from a location based on name.": {
@@ -100,7 +94,7 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/backups/{backup}/restore": {
+    "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Backup.Admin/backupLocations/{location}/backups/{backup}/restore": {
       "post": {
         "x-ms-examples": {
           "Restore a backup.": {
@@ -143,10 +137,7 @@
             "description": "ACCEPTED"
           }
         },
-        "x-ms-long-running-operation": true,
-        "x-ms-long-running-operation-options": {
-          "final-state-via": "location"
-        }
+        "x-ms-long-running-operation": true
       }
     }
   },

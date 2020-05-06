@@ -12,7 +12,7 @@
           "rules": [
             {
               "enabled": true,
-              "name": "olcmtest1",
+              "name": "olcmtest",
               "type": "Lifecycle",
               "definition": {
                 "filters": {
@@ -20,7 +20,7 @@
                     "blockBlob"
                   ],
                   "prefixMatch": [
-                    "olcmtestcontainer1"
+                    "olcmtestcontainer"
                   ]
                 },
                 "actions": {
@@ -42,46 +42,6 @@
                   }
                 }
               }
-            },
-            {
-              "enabled": true,
-              "name": "olcmtest2",
-              "type": "Lifecycle",
-              "definition": {
-                "filters": {
-                  "blobTypes": [
-                    "blockBlob"
-                  ],
-                  "prefixMatch": [
-                    "olcmtestcontainer2"
-                  ],
-                  "blobIndexMatch": [
-                    {
-                      "name": "tag1",
-                      "op": "==",
-                      "value": "val1"
-                    },
-                    {
-                      "name": "tag2",
-                      "op": "==",
-                      "value": "val2"
-                    }
-                  ]
-                },
-                "actions": {
-                  "baseBlob": {
-                    "tierToCool": {
-                      "daysAfterModificationGreaterThan": 30
-                    },
-                    "tierToArchive": {
-                      "daysAfterModificationGreaterThan": 90
-                    },
-                    "delete": {
-                      "daysAfterModificationGreaterThan": 1000
-                    }
-                  }
-                }
-              }
             }
           ]
         }
@@ -99,7 +59,7 @@
             "rules": [
               {
                 "enabled": true,
-                "name": "olcmtest1",
+                "name": "olcmtest",
                 "type": "Lifecycle",
                 "definition": {
                   "filters": {
@@ -107,7 +67,7 @@
                       "blockBlob"
                     ],
                     "prefixMatch": [
-                      "olcmtestcontainer1"
+                      "olcmtestcontainer"
                     ]
                   },
                   "actions": {
@@ -125,46 +85,6 @@
                     "snapshot": {
                       "delete": {
                         "daysAfterCreationGreaterThan": 30
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "enabled": true,
-                "name": "olcmtest2",
-                "type": "Lifecycle",
-                "definition": {
-                  "filters": {
-                    "blobTypes": [
-                      "blockBlob"
-                    ],
-                    "prefixMatch": [
-                      "olcmtestcontainer2"
-                    ],
-                    "blobIndexMatch": [
-                      {
-                        "name": "tag1",
-                        "op": "==",
-                        "value": "val1"
-                      },
-                      {
-                        "name": "tag2",
-                        "op": "==",
-                        "value": "val2"
-                      }
-                    ]
-                  },
-                  "actions": {
-                    "baseBlob": {
-                      "tierToCool": {
-                        "daysAfterModificationGreaterThan": 30
-                      },
-                      "tierToArchive": {
-                        "daysAfterModificationGreaterThan": 90
-                      },
-                      "delete": {
-                        "daysAfterModificationGreaterThan": 1000
                       }
                     }
                   }
